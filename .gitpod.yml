@@ -5,7 +5,7 @@ tasks:
         uv venv && source .venv/bin/activate && 
         uv pip install -r requirements.txt &&
         gp sync-done initSetup
-    command: gp open README.md && cd src
+    command: gp open README.md && && marimo edit
   
     #command: gp open README.md && gp open CrewAi.ipynb && marimo edit hello-world-marimo.py
 

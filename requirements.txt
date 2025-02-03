@@ -1,1 +1,3 @@
 marimo
+pytest
+pytest-watch

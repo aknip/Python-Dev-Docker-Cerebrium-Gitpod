@@ -1,5 +1,5 @@
 [cerebrium.deployment]
-name = "cerebrium-simple-service"
+name = "cerebrium-simpleservice"
 python_version = "3.12"
 docker_base_image_url = "debian:bookworm-slim"
 disable_auth = false
@@ -20,3 +20,5 @@ response_grace_period = 900
 scaling_metric = "concurrency_utilization"
 scaling_target = 100
 
+[cerebrium.dependencies.paths]
+pip = "requirements.txt"

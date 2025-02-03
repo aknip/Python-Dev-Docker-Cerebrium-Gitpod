@@ -1,5 +1,20 @@
 # Cerebrium Simple Service
 
+
+
+
+Auto exec pytest tests 
+1.
+in Host/Mac terminal:
+docker-compose exec myapp marimo export script ./src/marimoapp.py -o ./src/marimoapp_script.py --watch
+
+2.
+in Marimo terminal:
+cd src
+ptw
+
+
+
 ## Run in Gitpod
 https://gitpod.io/#https://github.com/aknip/Python-Dev-Docker-Cerebrium-Gitpod
 
@@ -13,7 +28,7 @@ This script setups an virtual environment form scratch using uv. Active venv is 
 
 ## Docker Compose
 
-docker-compose up --build
+docker-compose up -d --build
 
 Folder src can be edited 
 
@@ -22,9 +37,9 @@ Folder src can be edited
 - Use `exec` for executing a command in a running container.
 Examples:
 - docker-compose run myapp bash
-- docker-compose exec myapp bash
 - docker-compose run myapp python3 --version
-- docker-compose run myapp python src/marimoapp.py
+- docker-compose exec myapp bash
+- docker-compose exec myapp python src/marimoapp.py
 
 
 ## Docker
@@ -34,10 +49,13 @@ docker run -p 8080:8080 -it my_app
 
 
 
+Export a marimo notebook as a flat script, in topological order.
 
+Example:
+marimo export script notebook.py -o notebook.script.py
 
-
-
+Watch for changes and regenerate the script on modification:
+marimo export script notebook.py -o notebook.script.py --watch
 
 
 
