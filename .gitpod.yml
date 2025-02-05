@@ -1,11 +1,10 @@
 tasks:
   - name: Setup
     init: > 
-        curl -LsSf https://astral.sh/uv/install.sh | sh && 
-        uv venv && source .venv/bin/activate && 
-        uv pip install -r requirements.txt &&
+        curl -fsSL https://get.docker.com -o get-docker.sh && 
+        sudo sh get-docker.sh &&
         gp sync-done initSetup
-    command: gp open README.md && && marimo edit
+    command: gp open README.md && docker-compose up
   
     #command: gp open README.md && gp open CrewAi.ipynb && marimo edit hello-world-marimo.py
 
