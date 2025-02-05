@@ -1,8 +1,7 @@
 tasks:
   - name: Setup
     init: > 
-        curl -fsSL https://get.docker.com -o get-docker.sh && 
-        sudo sh get-docker.sh &&
+        ls &&
         gp sync-done initSetup
     command: gp open README.md && docker-compose up
   
